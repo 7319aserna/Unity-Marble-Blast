@@ -4,6 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - TowerBumper
   - Ground
   layers:
   - Default
