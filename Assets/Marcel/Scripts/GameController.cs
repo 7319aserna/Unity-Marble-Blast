@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MegaMarbleBoost : Powerup
-{
+public class GameController : MonoBehaviour {
+
+    enum ballTrait { speed, scale };
+    float[] timer = new float[] { 0, 0 };
 
 	// Use this for initialization
 	void Start ()
@@ -14,12 +16,6 @@ public class MegaMarbleBoost : Powerup
 	// Update is called once per frame
 	void Update ()
     {
-		
-	}
 
-    public override void applyPowerup(BallController player)
-    {
-        player.transform.localScale *= boost;
-        player.jumpForce *= boost;
-    }
+	}
 }

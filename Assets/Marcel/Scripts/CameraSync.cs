@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraSync : MonoBehaviour
 {
+    
     Transform tParent;
     public Vector3 offset;
 
