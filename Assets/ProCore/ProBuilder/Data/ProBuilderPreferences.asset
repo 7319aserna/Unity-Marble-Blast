@@ -25,11 +25,7 @@ MonoBehaviour:
   m_String_keys: []
   m_Color_keys: []
   m_Material_keys: []
-<<<<<<< HEAD
   m_Bool_values: 0101
-=======
-  m_Bool_values: 
->>>>>>> Marcel
   m_Int_values: 00000000020000000000000000000000
   m_Float_values:
   - 0
