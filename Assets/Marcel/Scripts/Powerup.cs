@@ -5,6 +5,7 @@ using UnityEngine;
 public class Powerup : MonoBehaviour {
 
     public MeshRenderer mesh;
+    public GameController gameController;
     public float boost;
 
 	// Use this for initialization
