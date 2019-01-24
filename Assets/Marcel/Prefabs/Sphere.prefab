@@ -221,9 +221,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296d5918a2966064eace2dac0e94ea01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 30
-  jumpForce: 10
-  maxSpeed: 30
+  cameraTransform: {fileID: 4492184662812650}
+  cameraVec: {x: 0, y: 0}
+  currentForce: 70
+  currentJumpForce: 70
+  currentMaxSpeed: 70
+  baseForce: 0
+  baseJumpForce: 0
+  baseMaxSpeed: 0
+  onGround: 1
 --- !u!114 &114769660321093886
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -235,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9913fa54fecb3de43b6913e3206bb0fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: 30, y: 10, z: 30}
+  offset: {x: 50, y: 15, z: 50}
   x: 0
   sensitivity: 0
 --- !u!114 &114924109270142948

@@ -8,10 +8,11 @@ public class Powerup : MonoBehaviour {
     public GameController gameController;
     public float boost;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start()
     {
         mesh = gameObject.GetComponent<MeshRenderer>();
+        gameController = FindObjectOfType<GameController>();
 	}
 	
 	// Update is called once per frame
