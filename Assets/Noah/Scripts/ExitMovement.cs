@@ -10,7 +10,7 @@ public class ExitMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        dir = GetComponentInParent<Transform>().position + transform.position - player.position;
+        dir = transform.position - player.position;
         player.GetComponent<Rigidbody>().AddForce(dir * forceMult);
 	}
 }
