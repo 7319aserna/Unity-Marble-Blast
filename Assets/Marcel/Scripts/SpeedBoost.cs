@@ -21,5 +21,6 @@ public class SpeedBoost : Powerup
     {
         player.currentForce *= boost;
         player.currentMaxSpeed *= boost;
+        gameController.startTimer("speed");
     }
 }

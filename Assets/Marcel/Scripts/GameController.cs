@@ -5,8 +5,13 @@ using UnityEngine;
 public class GameController : MonoBehaviour {
 
     int[] baseTime = new int[] { 5, 10 };
+    [SerializeField]
     float[] timer = new float[] { 5, 10 };
+
     bool[] timerGo = new bool[] { false, false };
+
+    int gemCount;
+    int totalGemCount;
 
     BallController player;
 
@@ -31,6 +36,16 @@ public class GameController : MonoBehaviour {
             if (timer[i] < 0)
             {
                 timer[i] = baseTime[i];
+                timerGo[i] = false;
+                if (i == 0)
+                {
+                    player.currentForce = player.baseForce;
+                    player.currentMaxSpeed = player.baseMaxSpeed;
+                }
+                else
+                {
+                    player.transform.localScale = new Vector3(10,10,10);
+                }
             }
         }
 	}
