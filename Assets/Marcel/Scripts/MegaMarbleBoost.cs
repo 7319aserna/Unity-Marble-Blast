@@ -20,6 +20,5 @@ public class MegaMarbleBoost : Powerup
     public override void applyPowerup(BallController player)
     {
         player.transform.localScale *= boost;
-        player.jumpForce *= boost;
     }
 }
