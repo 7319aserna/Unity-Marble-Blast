@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mesh: {fileID: 23588512378348220}
   gameController: {fileID: 0}
-  boost: 2
+  boost: 1.5
 --- !u!136 &136919444835598392
 CapsuleCollider:
   m_ObjectHideFlags: 1

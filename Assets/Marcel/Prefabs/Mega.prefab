@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd507c9281a07b24680bbadd56d5d22a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mesh: {fileID: 0}
+  mesh: {fileID: 23448440246244528}
   gameController: {fileID: 0}
   boost: 2
 --- !u!136 &136064811243482806

@@ -10,7 +10,7 @@ public class GameController : MonoBehaviour {
 
     bool[] timerGo = new bool[] { false, false };
 
-    int gemCount;
+    public int gemCount = 0;
     int totalGemCount;
 
     BallController player;
