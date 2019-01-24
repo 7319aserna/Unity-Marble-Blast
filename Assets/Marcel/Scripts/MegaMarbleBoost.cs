@@ -20,5 +20,6 @@ public class MegaMarbleBoost : Powerup
     public override void applyPowerup(BallController player)
     {
         player.transform.localScale *= boost;
+        gameController.startTimer("size");
     }
 }
