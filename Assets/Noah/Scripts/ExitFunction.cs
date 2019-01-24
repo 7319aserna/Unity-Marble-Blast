@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ExitFunction : MonoBehaviour {
     Scene nextLevel;
+    public Transform mCam;
 
 	// Use this for initialization
 	void Start ()
