@@ -6,24 +6,33 @@ public class BallController : MonoBehaviour
 {
 
     Rigidbody rb;
-    public float force;                 // amount of force for movement
-    public float jumpForce;             // amount of force for jumping
-    public float maxSpeed;              // maximum speed that player can go
-    bool onGround = true;               // controls if player is on the ground or not
+    [SerializeField]
+    Transform cameraTransform;
+    [SerializeField]
+    Vector2 cameraVec;
+    Vector3 forces;
+    public float currentForce;                 // amount of force for movement
+    public float currentJumpForce;             // amount of force for jumping
+    public float currentMaxSpeed;              // maximum speed that player can go
+    float baseForce;
+    float baseJumpForce;
+    float baseMaxSpeed;
+    bool onGround = true;                      // controls if player is on the ground or not
 
 
 	// Use this for initialization
 	void Start ()
     {
-        rb = GetComponent<Rigidbody>();	
+        rb = GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
+        cameraVec = new Vector2(cameraTransform.forward.x, cameraTransform.forward.z).normalized;
         // apply movement via GetAxis
-        float horizontal = Input.GetAxis("Horizontal") * force;
-        float vertical = Input.GetAxis("Vertical") * force;
+        float horizontal = Input.GetAxis("Horizontal") * cameraVec.x + Input.GetAxis("Vertical") * -cameraVec.y;
+        float vertical = Input.GetAxis("Horizontal") * cameraVec.y + Input.GetAxis("Vertical") * cameraVec.x;
 
         float jump = 0;
 
@@ -31,22 +40,25 @@ public class BallController : MonoBehaviour
         if (Input.GetKeyDown("space"))
         {
             if (onGround)
-                jump = Input.GetAxis("Jump") * jumpForce;
+                jump = Input.GetAxis("Jump") * currentJumpForce;
         }
 
         // move by time
         horizontal *= Time.deltaTime;
         vertical *= Time.deltaTime;
 
+        forces = new Vector3(vertical, 0, -horizontal).normalized * currentForce;
+
         // apply force to player's rigidbody to make it move
-        rb.AddForce(new Vector3(horizontal, jump, vertical), ForceMode.Impulse);
-        if (rb.velocity.magnitude > maxSpeed)
+        rb.AddForce(forces, ForceMode.Force);
+        rb.AddForce(new Vector3(0, jump, 0), ForceMode.Impulse);
+        if (rb.velocity.magnitude > currentMaxSpeed)
         {
-            rb.velocity = rb.velocity.normalized * maxSpeed;
+            rb.velocity = rb.velocity.normalized * currentMaxSpeed;
         }
 	}
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
         // if player is on ground
         if (collision.gameObject.tag == "Ground")

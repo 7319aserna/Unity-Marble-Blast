@@ -19,7 +19,7 @@ public class SpeedBoost : Powerup
 
     public override void applyPowerup(BallController player)
     {
-        player.force *= boost;
-        player.maxSpeed *= boost;
+        player.currentForce *= boost;
+        player.currentMaxSpeed *= boost;
     }
 }
