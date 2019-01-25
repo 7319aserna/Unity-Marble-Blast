@@ -38,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 1039615067786314}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 162.49887, y: 11.4, z: -111.23251}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mesh: {fileID: 23448440246244528}
   gameController: {fileID: 0}
-  boost: 2
+  boost: 1.5
 --- !u!136 &136064811243482806
 CapsuleCollider:
   m_ObjectHideFlags: 1

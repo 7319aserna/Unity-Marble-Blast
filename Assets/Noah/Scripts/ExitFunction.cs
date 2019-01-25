@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 
 public class ExitFunction : MonoBehaviour {
-    Scene nextLevel;
+    public string nextLevel;
     public Transform mCam;
     public TextMeshProUGUI youWinText;
 
@@ -29,6 +29,6 @@ public class ExitFunction : MonoBehaviour {
     IEnumerator WaitForSec()
     {
         yield return new WaitForSeconds(5);
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene(nextLevel);
     }
 }

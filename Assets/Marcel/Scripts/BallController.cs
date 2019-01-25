@@ -11,12 +11,15 @@ public class BallController : MonoBehaviour
     [SerializeField]
     Vector2 cameraVec;
     Vector3 forces;
+
+    public Vector3 startPoint;
     public float currentForce;                 // amount of force for movement
     public float currentJumpForce;             // amount of force for jumping
     public float currentMaxSpeed;              // maximum speed that player can go
     public float baseForce;
     public float baseJumpForce;
     public float baseMaxSpeed;
+
     [SerializeField]
     bool onGround = true;                      // controls if player is on the ground or not
 
@@ -26,13 +29,13 @@ public class BallController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
 
-        currentForce = 90;
+        currentForce = 150;
         currentJumpForce = 80;
-        currentMaxSpeed = 90;
+        currentMaxSpeed = 150;
 
-        baseForce = 90;
-        baseJumpForce = 90;
-        baseMaxSpeed = 90;
+        baseForce = currentForce;
+        baseJumpForce = currentJumpForce;
+        baseMaxSpeed = currentMaxSpeed;
 	}
 	
 	// Update is called once per frame
@@ -64,6 +67,17 @@ public class BallController : MonoBehaviour
         if (rb.velocity.magnitude > currentMaxSpeed)
         {
             rb.velocity = rb.velocity.normalized * currentMaxSpeed;
+        }
+
+        if (transform.position.y <= -50)
+        {
+            transform.position = startPoint;
+            rb.velocity = Vector3.zero;
+            rb.isKinematic = true;
+        }
+        else
+        {
+            rb.isKinematic = false;
         }
 	}
 

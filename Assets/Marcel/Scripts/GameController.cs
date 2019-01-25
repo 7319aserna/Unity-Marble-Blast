@@ -52,7 +52,7 @@ public class GameController : MonoBehaviour {
                 }
                 else
                 {
-                    player.transform.localScale = new Vector3(10,10,10);
+                    player.transform.localScale = new Vector3(5,5,5);
                 }
             }
         }
