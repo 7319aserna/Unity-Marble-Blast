@@ -98,14 +98,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1029399961890360}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 81.67178, y: 5.29, z: -180.81299}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalRotation: {x: -0, y: 0.70710707, z: -0, w: 0.7071066}
+  m_LocalPosition: {x: 12.5, y: 5, z: -187.5}
+  m_LocalScale: {x: 8, y: 8, z: 8}
   m_Children:
   - {fileID: 4552427370233618}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
 --- !u!20 &20909893438289962
 Camera:
   m_ObjectHideFlags: 1
@@ -223,9 +223,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraTransform: {fileID: 4492184662812650}
   cameraVec: {x: 0, y: 0}
-  currentForce: 70
-  currentJumpForce: 70
-  currentMaxSpeed: 70
+  currentForce: 90
+  currentJumpForce: 90
+  currentMaxSpeed: 90
   baseForce: 0
   baseJumpForce: 0
   baseMaxSpeed: 0

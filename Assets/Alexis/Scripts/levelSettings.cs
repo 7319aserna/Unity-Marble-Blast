@@ -11,7 +11,7 @@ public class levelSettings : MonoBehaviour {
         {
             SceneManager.LoadScene("TestLevel");
         }		
-        else if (Input.GetKeyDown(KeyCode.Escape))
+        else if (Input.GetKeyDown(KeyCode.Q))
         {
             SceneManager.LoadScene("Main Menu");
         }

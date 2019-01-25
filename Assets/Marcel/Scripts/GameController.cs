@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameController : MonoBehaviour {
 
@@ -11,7 +12,11 @@ public class GameController : MonoBehaviour {
     bool[] timerGo = new bool[] { false, false };
 
     public int gemCount = 0;
-    int totalGemCount;
+    public int totalGemCount;
+
+    public TextMeshProUGUI gems;
+    public TextMeshProUGUI exitAppeared;
+    public GameObject exit;
 
     BallController player;
 
@@ -22,7 +27,10 @@ public class GameController : MonoBehaviour {
         Cursor.lockState = CursorLockMode.Locked;
 
         player = FindObjectOfType<BallController>();
-	}
+
+        gems.text = "Gems: " + gemCount.ToString();
+
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -48,7 +56,13 @@ public class GameController : MonoBehaviour {
                 }
             }
         }
-	}
+        gems.text = "Gems: " + gemCount.ToString() + "/" + totalGemCount.ToString();
+        if (gemCount >= totalGemCount)
+        {
+            exit.SetActive(true);
+            exitAppeared.text = "The exit has appeared!";
+        }
+    }
 
     public void startTimer(string trait)
     {

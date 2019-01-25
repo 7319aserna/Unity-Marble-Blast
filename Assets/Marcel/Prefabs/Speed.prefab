@@ -37,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1572165003110314}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 80.39125, y: 13.6, z: -141.86299}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalPosition: {x: 194.39056, y: 5.84, z: -187.22162}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mesh: {fileID: 23588512378348220}
   gameController: {fileID: 0}
-  boost: 1.5
+  boost: 2
 --- !u!136 &136919444835598392
 CapsuleCollider:
   m_ObjectHideFlags: 1
