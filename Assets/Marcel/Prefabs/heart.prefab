@@ -37,8 +37,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4783346868112906}
-  - component: {fileID: 114221818157849074}
   - component: {fileID: 65712816879321694}
+  - component: {fileID: 114883795250538170}
   m_Layer: 0
   m_Name: heart
   m_TagString: GameController
@@ -145,7 +145,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114221818157849074
+--- !u!114 &114883795250538170
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
