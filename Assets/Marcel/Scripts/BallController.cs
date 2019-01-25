@@ -14,9 +14,10 @@ public class BallController : MonoBehaviour
     public float currentForce;                 // amount of force for movement
     public float currentJumpForce;             // amount of force for jumping
     public float currentMaxSpeed;              // maximum speed that player can go
-    float baseForce;
-    float baseJumpForce;
-    float baseMaxSpeed;
+    public float baseForce;
+    public float baseJumpForce;
+    public float baseMaxSpeed;
+    [SerializeField]
     bool onGround = true;                      // controls if player is on the ground or not
 
 
@@ -24,6 +25,14 @@ public class BallController : MonoBehaviour
 	void Start ()
     {
         rb = GetComponent<Rigidbody>();
+
+        currentForce = 90;
+        currentJumpForce = 80;
+        currentMaxSpeed = 90;
+
+        baseForce = 90;
+        baseJumpForce = 90;
+        baseMaxSpeed = 90;
 	}
 	
 	// Update is called once per frame
