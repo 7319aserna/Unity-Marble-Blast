@@ -5,10 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - TowerBumper
-<<<<<<< HEAD
-=======
-  - Ground
->>>>>>> Marcel
+  - windArea
   layers:
   - Default
   - TransparentFX
@@ -18,7 +15,7 @@ TagManager:
   - UI
   - 
   - 
-  - PostProcessing
+  - 
   - 
   - 
   - 
